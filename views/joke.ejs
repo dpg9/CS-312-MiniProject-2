@@ -1,0 +1,19 @@
+<!-- views/joke.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your Joke</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <h1>Here's your joke, <%= firstName %>!</h1>
+    <% if (jokeData.type === 'single') { %>
+    <p><%= jokeData.joke %></p>
+    <% } else { %>
+    <p><strong>Setup:</strong> <%= jokeData.setup %></p>
+    <p><strong>Punchline:</strong> <%= jokeData.delivery %></p>
+    <% } %>
+    <a href="/">Get another joke</a>
+  </body>
+</html>
